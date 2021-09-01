@@ -18,6 +18,6 @@ ele responde 5 perguntas e é retornado para ele uma pontuação de 0 a 10, onde
 </ul>
 
 <h3>Link do projeto:</h3>
-<a href="">Clique aqui</a>
+<a href="https://quiz-html-css-js.netlify.app/index.html">Clique aqui</a>
 
 
