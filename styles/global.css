@@ -1,0 +1,252 @@
+*{
+    margin:  0;
+    padding:  0;
+    box-sizing:  border-box;
+}
+
+html{
+    --blue: #10b9c2;
+    --blue-dark: #94b5b2;
+    --white: #f5f4eb;
+    --orange: #f57842;
+    --green: #068704;
+    --blue-ligth: #4d8bc9;
+    --yellow: #c7c744;
+    --green-ligth: #30c72e;
+
+    width:  100vw;
+    height:  100vh;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    overflow-y: visible;
+}
+
+/*** Header ***/
+header{
+    width:  100%;
+    height:  100px;
+    background-color:  var(--white);
+
+    position: fixed;
+    z-index: 97;
+}
+
+header .center{
+    width:  100%;
+    height:  100%;
+    margin:  0 auto;
+    padding:  0 2%;
+    max-width:  1200px;
+
+    display:  flex;
+    align-items:  center;
+    justify-content:  space-between;
+}
+
+/*** Logo ***/
+header .logo{
+    width:  40%;
+}
+
+header .logo img{
+    width:  10rem;
+}
+
+/*** Menu-desktop ***/
+nav.menu-desktop ul{
+    list-style:  none;
+    display:  flex;
+}
+
+ul li a{
+    text-decoration:  none;
+    color: var(--blue-dark);
+    font-size:  1.2rem;
+    transition:  0.7s;
+}
+
+ul li:not(:last-child){
+    margin-right:  24px;
+}
+
+ul li a:hover{
+    color: red
+}
+
+#hambur{
+    width:  42px;
+    height:  42px;
+    
+    display:  none;
+    z-index: 99;
+}
+
+.menu-mobile{
+   display:  none;
+   z-index: 98;
+
+}
+
+.menu-mobile ul li > a{
+    z-index: 97;
+}
+
+.menu-mobile img{
+    position: absolute;
+    top: 0;
+    z-index:  1;
+}
+
+.menu-mobile img:first-child{
+    width:  100px;
+    top: 10px;
+    left:  30px;
+    opacity: 0.3;
+}
+
+.menu-mobile img:nth-last-of-type(2){
+    width:  100px;
+    top: 70px;
+    right: 60px;
+    opacity: 0.3;
+}
+
+.menu-mobile img:last-of-type{
+    width: 100px;
+    top:  130px;
+    opacity: 0.3;
+}
+
+/*** Footer ***/
+footer{
+    width: 100%;
+    background-color:  var(--white);
+}
+
+footer .center{
+    width:  100%;
+    max-width:  1200px;
+    margin:  0 auto;
+    text-align: center;
+    padding:  22px 2%;
+}
+
+footer  p{
+    font-size:  20px;
+    font-weight: 700;
+}
+
+footer img{
+    width:  100px;
+}
+
+/*** Mediaqueries abaixo ***/
+@media screen and (max-width: 550px){
+
+    /*** Menu ***/
+    nav.menu-desktop ul{
+        display:  none;
+    }
+
+    #hambur{
+        display:  block;
+        position: relative;
+    }
+
+    #hambur > span{
+        position: absolute;
+        top: 0;
+        left:  0;
+        margin-top:  10px;
+
+        width:  100%;
+        height: 3px;
+        background-color: var(--blue-dark);
+        border-radius:  100px;
+
+        transition:  0.3s;
+    }
+
+    #hambur > span:nth-last-of-type(2){
+        top:  8px;
+    }
+    
+    #hambur > span:nth-last-of-type(3){
+        top:  16px;
+    }
+
+    .menu-mobile{
+        display:  block;
+        width:  100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        top: -100%; 
+
+        background-color:  var(--white);
+        text-align: left;
+        padding:  50px 0;
+
+        transition:  0.7s;
+     }
+
+   .menu-mobile ul{
+       list-style:  none;
+       width:  10rem;
+       margin:  auto;
+   }
+
+   .menu-mobile ul li{
+       margin-right:  0;
+   }
+
+   .menu-mobile ul li:not(:first-of-type){
+       margin-top:  15px;
+   }
+
+   .menu-mobile > ul li::before{
+       content: "";
+       display:  inline-block;
+       background-image: url("../img/html5.png");
+       background-size: cover;
+       background-repeat:  no-repeat;
+       width:  20px;
+       height:  20px;
+   }
+
+.menu-mobile > ul li:first-of-type::before{
+    content:  "";
+    display:  inline-block;
+    width:  20px;
+    height:  20px;
+    background-image:  url("../img/home.png");
+}
+
+   .menu-mobile > ul li:nth-of-type(3):before{
+    content: "";
+    display:  inline-block;
+    background-image: url("../img/css.png");
+   }
+
+   .menu-mobile > ul li:nth-of-type(4):before{
+    content: "";
+    display:  inline-block;
+    background-image: url("../img/javascript.png");
+   }
+
+   .menu-mobile ul  li > a{
+       margin-left:  11px;
+   }
+
+}
+
+@media screen and (max-width: 319px){
+    .menu-mobile img {
+        display: none;
+    }
+}
+
+

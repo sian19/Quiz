@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Quiz programação</title>
+
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main-html.css">
+    <link rel="stylesheet" href="styles//main-css.css">
+    <link rel="stylesheet" href="styles/main-js.css">
+
+    <link rel="shortcut icon" type="image-x/png" href="img/img-icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,200&display=swap"
+        rel="stylesheet">
+
+    <meta name="description" content="quiz sobre html, css e javascript">
+    <meta name="keywords" content="quiz, programação, html, css, javascript">
+    <meta name="author" content="Sean Taron">
+
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="center">
+            <div class="logo">
+                <img src="img/logo .png" alt="">
+            </div>
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page-html.html" style="color: red;">HTML</a></li>
+                    <li><a href="page-css.html">Css</a></li>
+                    <li><a href="page-js.html">Javascript</a></li>
+                </ul>
+            </nav>
+
+            <!--Hambur-->
+            <div id="hambur">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!--Menu-mobile-->
+            <nav class="menu-mobile">
+
+                <img src="img/html5.png">
+                <img src="img/css.png">
+                <img src="img/javascript.png">
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page-html.html" style="color: red;">HTML</a></li>
+                    <li><a href="page-css.html">Css</a></li>
+                    <li><a href="page-js.html">Javascript</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Contéudo -->
+    <main>
+        <div class="center">
+            <div class="text">
+                Perguntas HTML
+                <div id="cont">10:00</div>
+            </div>
+
+            <!--Início-->
+            <section class="bloco">
+                <button id="start">Iniciar desafio</button>
+                <img src="img/html.svg" alt="html">
+            </section>
+
+            <!--Fim de jogo-->
+            <section class="bloco over" style="display: none;">
+                <img src="img/html.svg" alt="html">
+                <div class="text">
+                    <h3>O tempo acabou</h3>
+                    <h3>Fim de jogo</h3>
+                </div>
+                <button id="restart" onclick="reset()">Reiniciar</button>
+            </section>
+
+            <!--Mensagem de erro  ao não escolher uma pergunta-->
+            <h4 id="err-msg">ERRO! FAVOR SELECIONE UMA RESPOSTA</h4>
+
+            <!--Pergunta 1-->
+            <section class="wraper" style="display: none;">
+                <div class="question html">
+                    <h3>Oque é, e para que serve o HTML?</h3>
+
+                    <form action="post">
+                        <div class="resposta">
+                            <input id="question-1.1" type="radio" name="question">
+                            <label for="question-1.1" onclick="responder('correta')"></label>
+                            <div class="paragrafo">
+                                <p>A) É uma linguagem de marcação que serve para se adicionar textos, imagens, vídeos e
+                                    audio em
+                                    uma página web.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input id="question-1.2" type="radio" name="question">
+                            <label for="question-1.2" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>B) É uma linguagem back end, que roda no servidor.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-1.3">
+                            <label for="question-1.3" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>C) É uma linguagem de marcação utilizada para estilizar uma página web.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-1.4">
+                            <label for="question-1.4" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>D) É um framework usado para dar mais agilidade e praticidade ao seu projeto.</p>
+                            </div>
+                        </div>
+                    </form>
+                    <button id="responder" onclick="proxima()">Responder</button>
+                </div>
+            </section>
+
+            <!--Pergunta 2-->
+            <section class="wraper" style="display: none;">
+                <div class="question html">
+                    <h3>Para que serve a tag input no HTML?</h3>
+
+                    <form action="post">
+                        <div class="resposta">
+                            <input id="question-2.1" type="radio" name="question">
+                            <label for="question-2.1" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>A) Serve para adicionar imagens no documento do seu HTML .</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input id="question-2.2" type="radio" name="question">
+                            <label for="question-2.2" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>B) É usada para colocar um textarea na sua página web, para então ser digitado alguma
+                                    coisa.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-2.3">
+                            <label for="question-2.3" onclick="responder('correta')"></label>
+                            <div class="paragrafo">
+                                <p>C) A tag input é usada para criar controles interativos, para serem usados em
+                                    formulários da internet e pode ser usada para pegar dados de um usuário.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-2.4">
+                            <label for="question-2.4" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>D) Serve para caso o usuário querer usar algum número em um formulário por exemplo.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                    <button onclick="proxima()">Responder</button>
+                </div>
+            </section>
+
+            <!--Pergunta 3-->
+            <section class="wraper" style="display: none;">
+                <div class=" question html">
+                    <h3>Qual tag se usa para quebrar um texto?</h3>
+
+                    <form action="post">
+                        <div class="resposta">
+                            <input id="question-3.1" type="radio" name="question">
+                            <label for="question-3.1" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>A) Se usa a tag p para quebrar um texto.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input id="question-3.2" type="radio" name="question">
+                            <label for="question-3.2" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>B) Se usa a tag button para quebrar um texto.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-3.3">
+                            <label for="question-3.3" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>C) Se usa a tag video para quebrar um texto.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-3.4">
+                            <label for="question-3.4" onclick="responder('correta')"></label>
+                            <div class="paragrafo">
+                                <p>D Se usa a tag br para quebrar um texto.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                    <button onclick="proxima()">Responder</button>
+                </div>
+            </section>
+
+            <!--Pergunta 4-->
+            <section class="wraper" style="display: none;">
+                <div class="question html">
+                    <h3>Para que serve uma classe em HTML?</h3>
+
+                    <form action="post">
+                        <div class="resposta">
+                            <input id="question-4.1" type="radio" name="question">
+                            <label for="question-4.1" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>A) Para navegar por âncora usando o html junto com o javascript para
+                                    selecionar um determinado elemento.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input id="question-4.2" type="radio" name="question">
+                            <label for="question-4.2" onclick="responder('correta')"></label>
+                            <div class="paragrafo">
+                                <p>B) É criado no html e serve como referência para que o css ou javascript acessem os
+                                    elementos existentes dentro das classes no html.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-4.3">
+                            <label for="question-4.3" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>C) É usado para alterar os nomes dos atributos dentro do html.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-4.4">
+                            <label for="question-4.4" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>D) é usado para criar tabelas e alterar os valores das mesmas.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                    <button onclick="proxima()">Responder</button>
+                </div>
+            </section>
+
+            <!--Pergunta 5-->
+            <section class="wraper" style="display: none;">
+                <div class=" question html">
+                    <h3>Para que serve a tag select no html?</h3>
+
+                    <form action="post">
+                        <div class="resposta">
+                            <input id="question-5.1" type="radio" name="question">
+                            <label for="question-5.1" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>A) Para selecionar um determinado texto e alterar o valor dele.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input id="question-5.2" type="radio" name="question">
+                            <label for="question-5.2" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>B) Serve para adicionar mais elementos na página web.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-5.3">
+                            <label for="question-5.3" onclick="responder('correta')"></label>
+                            <div class="paragrafo">
+                                <p>C) É usada para definir um menu de opções, onde dentro desse menu podemos ter valores
+                                    dentro do elemento option onde se pode ser selecionado um deles.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-5.4">
+                            <label for="question-5.4" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>D) É usada para selecionar vários elementos para serem usados pelo usuário, mas
+                                    possui um certo limite de opções para serem usadas, no máximo se pode selecionar e
+                                    escolher 5 elementos de uma só vez.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                    <button onclick="proxima()">Responder</button>
+                </div>
+            </section>
+
+            <!--Resultado final do quiz-->
+            <section class="res-final" style="display: none;">
+                <img src="img/html.svg" alt="html">
+                <div class="text">
+                    <h3 id="h3">O resultado final é:</h3>
+                    <img src="img/emot-acerto_.svg" id="emot">
+                    <h3 id="pontos">Você conseguiu fazer 10 pontos</h3>
+                    <button id="restart" onclick="reset()">Reiniciar</button>
+                </div>
+            </section>
+        </div>
+
+
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="center">
+            <p>Sean Taron</p>
+            <img src="img/logo .png" alt="rodapé">
+        </div>
+    </footer>
+
+</body>
+
+</html>

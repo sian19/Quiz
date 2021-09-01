@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Quiz programação</title>
+
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main-html.css">
+    <link rel="stylesheet" href="styles//main-css.css">
+    <link rel="stylesheet" href="styles/main-js.css">
+
+    <link rel="shortcut icon" type="image-x/png" href="img/img-icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,200&display=swap"
+        rel="stylesheet">
+
+    <meta name="description" content="quiz sobre html, css e javascript">
+    <meta name="keywords" content="quiz, programação, html, css, javascript">
+    <meta name="author" content="Sean Taron">
+
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="center">
+            <div class="logo">
+                <img src="img/logo .png" alt="">
+            </div>
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page-html.html">HTML</a></li>
+                    <li><a href="page-css.html" style="color: red;">Css</a></li>
+                    <li><a href="page-js.html">Javascript</a></li>
+                </ul>
+            </nav>
+
+            <!--Hambur-->
+            <div id="hambur">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!--Menu-mobile-->
+            <nav class="menu-mobile">
+
+                <img src="img/html5.png">
+                <img src="img/css.png">
+                <img src="img/javascript.png">
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page-html.html">HTML</a></li>
+                    <li><a href="page-css.html" style="color: red;">Css</a></li>
+                    <li><a href="page-js.html">Javascript</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Contéudo -->
+    <main>
+        <div class="center">
+            <div class="text css">
+                Perguntas Css
+                <div id="cont">10:00</div>
+            </div>
+
+            <!--Início-->
+            <section class="bloco css" style="display: block;">
+                <button id="start">Iniciar desafio</button>
+                <img src="img/css_.svg" alt="css">
+            </section>
+
+            <!--Fim de jogo-->
+            <section class="bloco over" style="display: none;">
+                <img src="img/html.svg" alt="css">
+                <div class="text">
+                    <h3>O tempo acabou</h3>
+                    <h3>Fim de jogo</h3>
+                </div>
+                <button id="restart" onclick="reset()">Reiniciar</button>
+            </section>
+
+            <!--Mensagem de erro  ao não escolher uma pergunta-->
+            <h4 id="err-msg">ERRO! FAVOR SELECIONE UMA RESPOSTA</h4>
+
+            <!--Pergunta 1-->
+            <section class="wraper css" style="display: none;">
+                <div class="question css">
+                    <h3>O que é o css?</h3>
+
+                    <form action="post">
+                        <div class="resposta">
+                            <input id="question-1.1" type="radio" name="question">
+                            <label for="question-1.1" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>A) É uma linguagem de estilização de uma página web que só funciona junto com o
+                                    javascript e é
+                                    completamente dependente dele.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input id="question-1.2" type="radio" name="question">
+                            <label for="question-1.2" onclick="responder('correta')"></label>
+                            <div class="paragrafo">
+                                <p>B) É uma linguagem de estilização que serve simplesmente para dar estilos a sua
+                                    página web, como colocar cores de fundo, alterar o tamanho dos textos, posicionar os
+                                    elementos de acordo com a sua referência, ou seja, ela dá estilos a uma página .</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-1.3">
+                            <label for="question-1.3" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>C) É uma linguagem de tipagem dinâmica e não pode ser usada com eficácia fora de
+                                    um servidor local.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-1.4">
+                            <label for="question-1.4" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>D) É uma linguagem derivada do HTML e necessita de um navegador web para rodar.</p>
+                            </div>
+                        </div>
+                    </form>
+                    <button id="responder" onclick="proxima()">Responder</button>
+                </div>
+            </section>
+
+            <!--Pergunta 2-->
+            <section class="wraper css" style="display: none;">
+                <div class="question css">
+                    <h3>O que é mediaqueries em css?</h3>
+
+                    <form action="post">
+                        <div class="resposta">
+                            <input id="question-2.1" type="radio" name="question">
+                            <label for="question-2.1" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>A) É uma propriedade dentro do css que serve para alterar o formato da página web.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input id="question-2.2" type="radio" name="question">
+                            <label for="question-2.2" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>B) É uma propriedade no css que serve para alterar a altura do elemento.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-2.3">
+                            <label for="question-2.3" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>C) É uma propriedade do css vinculada com o HTML, que funciona de forma linear
+                                    alterando os
+                                    elementos da página.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-2.4">
+                            <label for="question-2.4" onclick="responder('correta')"></label>
+                            <div class="paragrafo">
+                                <p>D) É um comando usado dentro do css que serve basicamente para alterar os elementos
+                                    quando o navegador chegar até uma certa altura ou largura definidos dentro da
+                                    mediaquerie, pode ser alterado o tamanho do elemento, fonte e o que quiser.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                    <button onclick="proxima()">Responder</button>
+                </div>
+            </section>
+
+            <!--Pergunta 3-->
+            <section class="wraper css" style="display: none;">
+                <div class=" question css">
+                    <h3>Se o elemento pai for definido como position relative e o elemento filho for definido como
+                        position absolute, o que acontece no elemento filho?</h3>
+
+                    <form action="post">
+                        <div class="resposta">
+                            <input id="question-3.1" type="radio" name="question">
+                            <label for="question-3.1" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>A) O elemento filho se posiciona em qualquer lugar da tela.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input id="question-3.2" type="radio" name="question">
+                            <label for="question-3.2" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>B) O elemento filho fica flutuante dentro do elemento pai.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-3.3">
+                            <label for="question-3.3" onclick="responder('correta')"></label>
+                            <div class="paragrafo">
+                                <p>C) O elemento filho se posiciona em relação ao elemento pai.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-3.4">
+                            <label for="question-3.4" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>D O elemento filho desaparece da tela por completo.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                    <button onclick="proxima()">Responder</button>
+                </div>
+            </section>
+
+            <!--Pergunta 4-->
+            <section class="wraper css" style="display: none;">
+                <div class="question css">
+                    <h3>Suponhamos que eu queira deixar três elementos um ao lado do outro e afastados em uma distância
+                        igual um do outro, quais propriedade no css eu devo usar e como eu devo defini-las?</h3>
+
+                    <form action="post">
+                        <div class="resposta">
+                            <input id="question-4.1" type="radio" name="question">
+                            <label for="question-4.1" onclick="responder('correta')"></label>
+                            <div class="paragrafo">
+                                <p>A) Se usa a propriedade display e a define como flex, em seguida se usa a propriedade
+                                    justify-content e a define como space-between.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input id="question-4.2" type="radio" name="question">
+                            <label for="question-4.2" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>B) Se usa a propriedade overflow e a define como hidden, e depois se usa a
+                                    propriedade display e a define como block.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-4.3">
+                            <label for="question-4.3" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>C) Se usa a propriedade display e a define como grid, em seguida se usa a propriedade
+                                    grid-area e a define com o nome da classe, id ou tipo do elemento.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-4.4">
+                            <label for="question-4.4" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>D) Se usa a propriedade float e a define como right, e em seguida se usa a
+                                    propriedade clear e a define como clear-both.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                    <button onclick="proxima()">Responder</button>
+                </div>
+            </section>
+
+            <!--Pergunta 5-->
+            <section class="wraper css" style="display: none;">
+                <div class=" question css">
+                    <h3>Para que serve a propriedade background-position no css?</h3>
+
+                    <form action="post">
+                        <div class="resposta">
+                            <input id="question-5.1" type="radio" name="question">
+                            <label for="question-5.1" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>A) Serve para colocar uma cor de fundo de acordo com a posição que definimos dentro
+                                    de um elemento.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input id="question-5.2" type="radio" name="question">
+                            <label for="question-5.2" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>B) Serve para alterar o tamanho de um elemento.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-5.3">
+                            <label for="question-5.3" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>C) Serve para colocar uma imagem no plano de fundo de um elemento.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-5.4">
+                            <label for="question-5.4" onclick="responder('correta')"></label>
+                            <div class="paragrafo">
+                                <p>D) Serve para se posicionar uma imagem de fundo onde quisermos dentro de um elemento
+                                    no
+                                    qual a imagem se encontra.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                    <button onclick="proxima()">Responder</button>
+                </div>
+            </section>
+
+            <!--Resultado final do quiz-->
+            <section class="res-final css" style="display: none;">
+                <img src="img/css_.svg" alt="css">
+                <div class="text">
+                    <h3 id="h3">O resultado final é:</h3>
+                    <img src="img/emot-acerto_.svg" id="emot">
+                    <h3 id="pontos">Você conseguiu fazer 10 pontos</h3>
+                    <button id="restart" onclick="reset()">Reiniciar</button>
+                </div>
+            </section>
+        </div>
+
+
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="center">
+            <p>Sean Taron</p>
+            <img src="img/logo .png" alt="rodapé">
+        </div>
+    </footer>
+
+</body>
+
+</html>

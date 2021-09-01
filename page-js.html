@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Quiz programação</title>
+
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main-html.css">
+    <link rel="stylesheet" href="styles//main-css.css">
+    <link rel="stylesheet" href="styles/main-js.css">
+
+    <link rel="shortcut icon" type="image-x/png" href="img/img-icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,200&display=swap"
+        rel="stylesheet">
+
+    <meta name="description" content="quiz sobre html, css e javascript">
+    <meta name="keywords" content="quiz, programação, html, css, javascript">
+    <meta name="author" content="Sean Taron">
+
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="center">
+            <div class="logo">
+                <img src="img/logo .png" alt="">
+            </div>
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page-html.html">HTML</a></li>
+                    <li><a href="page-css.html">Css</a></li>
+                    <li><a href="page-js.html" style="color: red;">Javascript</a></li>
+                </ul>
+            </nav>
+
+            <!--Hambur-->
+            <div id="hambur">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!--Menu-mobile-->
+            <nav class="menu-mobile">
+
+                <img src="img/html5.png">
+                <img src="img/css.png">
+                <img src="img/javascript.png">
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page-html.html">HTML</a></li>
+                    <li><a href="page-css.html">Css</a></li>
+                    <li><a href="page-js.html" style="color: red;">Javascript</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Contéudo -->
+    <main>
+        <div class="center">
+            <div class="text js">
+                Perguntas Javascript
+                <div id="cont">10:00</div>
+            </div>
+
+            <!--Início-->
+            <section class="bloco js">
+                <button id="start">Iniciar desafio</button>
+                <img src="img/js2.svg" alt="js">
+            </section>
+
+            <!--Fim de jogo-->
+            <section class="bloco overjs" style="display: none;">
+                <img src="img/js2.svg" alt="js">
+                <div class="text">
+                    <h3>O tempo acabou</h3>
+                    <h3>Fim de jogo</h3>
+                </div>
+                <button id="restart" onclick="reset()">Reiniciar</button>
+            </section>
+
+            <!--Mensagem de erro  ao não escolher uma pergunta-->
+            <h4 id="err-msg">ERRO! FAVOR SELECIONE UMA RESPOSTA</h4>
+
+            <!--Pergunta 1-->
+            <section class="wraper js" style="display: none;">
+                <div class="question">
+                    <h3>O que é o Javascript?</h3>
+
+                    <form action="post">
+                        <div class="resposta">
+                            <input id="question-1.1" type="radio" name="question">
+                            <label for="question-1.1" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>A) É uma linguagem voltada completamente ao back end e roda do lado do servidor.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input id="question-1.2" type="radio" name="question">
+                            <label for="question-1.2" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>B) É uma linguagem de baixo nível usada no front end.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-1.3">
+                            <label for="question-1.3" onclick="responder('correta')"></label>
+                            <div class="paragrafo">
+                                <p>C) É uma linguagem de programação usada no front end para dar mais interatividade na
+                                    página web, tais como animações e etc.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-1.4">
+                            <label for="question-1.4" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>D) É um framework usado tanto no front end e quanto no back end para ajudar no
+                                    desenvolvimento de interfaces para o usuário.</p>
+                            </div>
+                        </div>
+                    </form>
+                    <button id="responder" onclick="proxima()">Responder</button>
+                </div>
+            </section>
+
+            <!--Pergunta 2-->
+            <section class="wraper js" style="display: none;">
+                <div class="question js">
+                    <h3>Como funciona uma array em javascript?</h3>
+
+                    <form action="post">
+                        <div class="resposta">
+                            <input id="question-2.1" type="radio" name="question">
+                            <label for="question-2.1" onclick="responder('correta')"></label>
+                            <div class="paragrafo">
+                                <p>A) Funciona como se fosse uma variável mas tem o objetivo de armazenar vários valores
+                                    dentro dela e até mesmo outras arrays. Ela é como se fosse um armário com vários
+                                    compartimentos onde se pode colocar algo.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input id="question-2.2" type="radio" name="question">
+                            <label for="question-2.2" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>B) Funciona como uma variável local e armazena apenas um valor.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-2.3">
+                            <label for="question-2.3" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>C) É uma variável onde se armazena valores booleanos.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-2.4">
+                            <label for="question-2.4" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>D) Serve para armazenar números tanto inteiros quanto reais.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                    <button onclick="proxima()">Responder</button>
+                </div>
+            </section>
+
+            <!--Pergunta 3-->
+            <section class="wraper js" style="display: none;">
+                <div class=" question jshtml">
+                    <h3>Como se usa uma função em Javascript?</h3>
+
+                    <form action="post">
+                        <div class="resposta">
+                            <input id="question-3.1" type="radio" name="question">
+                            <label for="question-3.1" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>A) Se usa definindo ela fora do arquivo js e depois colocando dentro da mesma oque
+                                    quiser.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input id="question-3.2" type="radio" name="question">
+                            <label for="question-3.2" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>B) É usada para converter string em números.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-3.3">
+                            <label for="question-3.3" onclick="responder('correta')"></label>
+                            <div class="paragrafo">
+                                <p>C) Se usa para calcular, verificar e retornar alguma coisa dentro do código,
+                                    normalmente é usada para fazer uma funcionalidade específica dentro do código como
+                                    por exemplo receber um nome e retornar uma idade. Usando uma função deixa seu código
+                                    mais fácil de dar manutenção no futuro.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-3.4">
+                            <label for="question-3.4" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>D) é usada para mapear uma array.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                    <button onclick="proxima()">Responder</button>
+                </div>
+            </section>
+
+            <!--Pergunta 4-->
+            <section class="wraper js" style="display: none;">
+                <div class="question jshtml">
+                    <h3>Para que serve a função filter em Javascript?</h3>
+
+                    <form action="post">
+                        <div class="resposta">
+                            <input id="question-4.1" type="radio" name="question">
+                            <label for="question-4.1" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>A) Serve para trocar os valores de uma array.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input id="question-4.2" type="radio" name="question">
+                            <label for="question-4.2" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>B) Serve para unir dois objetos.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-4.3">
+                            <label for="question-4.3" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>C) Serve para desestruturar uma array e a traforma-la em um objeto para entaõ ser
+                                    trabalhado com json.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-4.4">
+                            <label for="question-4.4" onclick="responder('correta')"></label>
+                            <div class="paragrafo">
+                                <p>D) Serve para interar sobre uma array e pegar por exemplo todos os números maiores
+                                    que 10 e colocar em outra array somente os números que atendam esses requisitos,
+                                    também pode ser usada para pegar qualquer valor de dentro de uma array seguindo a
+                                    condiçao que foi estipulada dentro da função.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                    <button onclick="proxima()">Responder</button>
+                </div>
+            </section>
+
+            <!--Pergunta 5-->
+            <section class="wraper js" style="display: none;">
+                <div class=" question jshtml">
+                    <h3>Para que serve a função fetch em Javascript?</h3>
+
+                    <form action="post">
+                        <div class="resposta">
+                            <input id="question-5.1" type="radio" name="question">
+                            <label for="question-5.1" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>A) Serve para trazer maneiras diferentes de se trabalhar com objetos.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input id="question-5.2" type="radio" name="question">
+                            <label for="question-5.2" onclick="responder('correta')"></label>
+                            <div class="paragrafo">
+                                <p>B) É usada para trabalhar com dados externos, como por exemplo uma API.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-5.3">
+                            <label for="question-5.3" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>C) É usada para criar uma API web dentro do Javascript.</p>
+                            </div>
+                        </div>
+
+                        <div class="resposta">
+                            <input type="radio" name="question" id="question-5.4">
+                            <label for="question-5.4" onclick="responder('errada')"></label>
+                            <div class="paragrafo">
+                                <p>D) Serve para manipular vários elementos dentro de uma array.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                    <button onclick="proxima()">Responder</button>
+                </div>
+            </section>
+
+            <!--Resultado final do quiz-->
+            <section class="res-final js" style="display: none;">
+                <img src="img/js2.svg" alt="js">
+                <div class="text">
+                    <h3 id="h3">O resultado final é:</h3>
+                    <img src="img/emot-acerto_.svg" id="emot">
+                    <h3 id="pontos">Você conseguiu fazer 10 pontos</h3>
+                    <button id="restart" onclick="reset()">Reiniciar</button>
+                </div>
+            </section>
+        </div>
+
+
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="center">
+            <p>Sean Taron</p>
+            <img src="img/logo .png" alt="rodapé">
+        </div>
+    </footer>
+
+</body>
+
+</html>

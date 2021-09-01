@@ -1,0 +1,119 @@
+/*** Main **/
+main{
+    width:  100%;
+    background-color:  var(--blue);
+}
+
+main .center{
+    width:  100%;
+    padding:  0 2%;
+    max-width:  1200px;
+    margin:  0 auto;
+
+    padding-top:  100px;
+}
+
+main .center > h2{
+    text-align: center;
+    padding-top:  40px;
+    color: var(--white);
+    font-size:  32px;
+    word-wrap: break-word;
+}
+
+h3{
+    color: var(--white);
+}
+
+h2{
+    color: red;
+}
+
+section h2, section h3{
+    text-align: center;
+}
+
+/*** Telas html, css e javascript ***/
+main .frames{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:  space-between;
+
+    padding-top:  70px;
+}
+
+main  section{
+    width: 40%;
+}
+
+main .tela{
+    width: 100%;
+    height: 300px;
+
+    margin-top:  15px;
+    margin-bottom: 15px;
+
+    transition: 0.6s;
+}
+
+main .tela.html{
+    background: url("../img/html.svg");
+    background-size: 300px 230px;
+    background-repeat: no-repeat;
+    background-position:  center;
+
+    background-color: #f57842;
+    border-radius:  10px;
+
+}
+
+main .tela.html:hover{
+    background-color: #eb8f65;
+}
+
+main .tela.css{
+    background-image: url("../img/css_.svg");
+    background-size: 320px 240px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: #4d8bc9;
+    border-radius:  10px;
+}
+
+main .tela.css:hover{
+    background-color: #59a2eb;
+}
+
+main .tela.javascript{
+    background-image: url("../img/js.svg");
+    background-size:  390px 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: #c7c744;
+    border-radius: 10px;
+}
+
+main .tela.javascript:hover{
+    background-color: #e0e04a;
+}
+
+main section:last-child{
+    margin:  0 auto;
+    padding-top:  28px;
+    padding-bottom:  33px;
+}
+
+/*** Abaixo as mediaqueries ***/
+@media screen and (max-width: 800px){
+    main section{
+        width:  100%;
+        max-width:  500px;
+        margin:  0 auto;
+    }
+
+    main section:nth-last-of-type(2){
+        margin-top:  28px;
+    }
+}

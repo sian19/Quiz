@@ -1,0 +1,45 @@
+section.bloco.js, section.bloco.overjs{
+    background-color:  rgba(236, 242, 136);
+    
+}
+
+section.bloco.js > img{
+    width: 72.7%;
+    display: block;
+    margin: auto;
+}
+
+section.bloco.overjs h3{
+    color: red;
+}
+
+section.bloco.overjs > img, section.res-final.js > img{
+    width:  75%;
+    margin: auto;
+    display: block;
+}
+
+section.res-final.js > img{
+    width: 72.8%;
+    opacity: 0.7;
+}
+
+section.res-final.js{
+    background-color: rgba(236, 242, 136);
+}
+
+main .center .text.js {
+    color: var(--yellow);
+}
+
+section.wraper.js .paragrafo > p{
+    color: #f2ff0d;
+}
+
+section.wraper.js {
+    border: 2px solid var(--yellow);
+}
+
+section.wraper.js form input[type=radio]:checked + label{
+    background-color: rgba(236, 242, 136);
+}
